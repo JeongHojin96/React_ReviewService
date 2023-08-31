@@ -1,0 +1,84 @@
+.main {
+  width: 40%;
+  margin: 10px auto;
+  border-collapse: collapse;
+  display: flex;
+  border: 1px solid #ddd;
+}
+
+.main div {
+  height: auto;
+}
+
+.list_image {
+  flex: 0 0 200px; /* 이미지 영역을 200px로 고정 */
+  padding: 0.3rem;
+}
+
+.list_image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* 이미지 비율 유지 */
+}
+
+@keyframes vibration {
+  from {
+    transform: rotate(2deg);
+  }
+  to {
+    transform: rotate(-2deg);
+  }
+}
+.list_text {
+  width: 100%;
+  display: flex;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  text-align: left;
+  flex-direction: column; /* 텍스트 요소들을 세로로 정렬 */
+}
+
+.list_nick {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 2px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.list_content {
+  margin-top: 7px;
+  margin-bottom: 5px;
+}
+.list_date {
+  margin-top: auto;
+  color: #5e5e5e;
+  font-size: 14px;
+}
+
+.more {
+  background-color: rgba(82, 82, 255, 0.3);
+  width: 70px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: white;
+  padding: 5px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+}
+.more:hover {
+  background-color: rgba(171, 17, 45, 0.7);
+  animation: vibration 0.1s infinite;
+}
+
+@keyframes vibration {
+  from {
+    transform: rotate(5deg);
+  }
+  to {
+    transform: rotate(-5deg);
+  }
+}

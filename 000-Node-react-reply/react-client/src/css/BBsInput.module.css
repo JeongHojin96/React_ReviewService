@@ -1,0 +1,135 @@
+/*
+private css 코딩
+css 파일을 .module.css 이름으로 변경
+BBS 컴포넌트에서 사용할 css 라면 BBs.module.css 처럼 생성
+이 파일의 모든 select 의 시작은 클래스
+*/
+
+.main {
+  width: 50%;
+  margin: 10px auto;
+  display: flex;
+  justify-items: left;
+}
+
+.input_container,
+.image {
+  flex: 4;
+  margin: 10px auto;
+}
+
+.input_container div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.input_container input {
+  padding: 8px;
+  margin: 3px;
+}
+
+.input_container input {
+  flex: 3;
+  outline: none;
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin: 3px;
+  transition: background-color 0.3s ease-in-out;
+  background-color: white;
+}
+.input_container textarea {
+  flex: 3;
+  outline: none;
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin: 3px;
+  transition: background-color 0.3s ease-in-out;
+  background-color: white;
+}
+
+.input_container input:focus,
+.input_container textarea:focus {
+  background-color: #eee;
+}
+
+.input_container input:hover,
+.input_container textarea:hover {
+  border: 1px solid #777;
+}
+
+.image_box input {
+  display: none;
+}
+
+.image_box label {
+  width: 80%;
+  display: inline-block;
+  outline: none;
+  font-size: 13px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  padding: 7.3px;
+  margin-top: 13px;
+  transition: background-color 0.3s ease-in-out;
+  background-color: white;
+
+  cursor: pointer;
+  align-self: center;
+  transition: background-color 0.3s ease-in-out; /* 배경색 변경 애니메이션 */
+}
+
+.image_box label:hover {
+  background-color: #eee; /* 마우스 호버 시 배경색 변경 */
+}
+
+.thumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+.thumb img {
+  max-width: 200px; /* 썸네일 이미지의 최대 너비 */
+  max-height: 200px; /* 썸네일 이미지의 최대 높이 */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out; /* 확대/축소 애니메이션 추가 */
+}
+
+.thumb img:hover {
+  transform: scale(3); /* 마우스 호버 시 약간 확대 */
+}
+
+.button {
+  margin-left: 150px;
+  align-items: center;
+}
+
+.button button {
+  background-color: rgb(82, 82, 255);
+  width: 90px;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+}
+.button button:hover {
+  background-color: #ab112d;
+  animation: vibration 0.1s infinite;
+}
+
+@keyframes vibration {
+  from {
+    transform: rotate(2deg);
+  }
+  to {
+    transform: rotate(-2deg);
+  }
+}
